@@ -23,7 +23,7 @@
 ### Formatting
 
 * Use soft tabs (4 spaces) for indentation
-* Prefer camelCasing over dashes in class names. Underscores are OK if you're using BEM (see [OOCSS and BEM](#oocss-and-bem) below).
+* Prefer camelCasing over dashes in class names.
 * Do not use ID selectors!
 * When using multiple selectors in a rule declaration, give each selector its own line.
 * Put a space before the opening brace `{` in rule declarations
@@ -108,9 +108,10 @@ We encourage some combination of OOCSS and BEM for these reasons:
 .listingCard_content { }
 ```
 
+  * Compound words in class names must be written in camelCase.
   * `.listingCard` is the “block” and represents the higher-level component
   * `.listingCard_title` is an “element” and represents a descendant of `.listingCard` that helps compose the block as a whole.
-  * `.listingCard-featured` is a “modifier” and represents a different state or variation on the `.listingCard` block.
+  * `.listingCard-featured` is a “modifier” and represents a different variation on the `.listingCard` block.
 
 ### ID selectors
 
@@ -126,6 +127,12 @@ We recommend creating JavaScript-specific camelCased classes to bind to, prefixe
 
 ```html
 <button class="btn btn-primary jsRequestToBook">Request to Book</button>
+```
+
+There are also state classes prefixed with `.js` or `.has` (for grammatical reasons) which may only be added or removed by Scripts:
+
+```html
+<div class="tabs isActive">First tab</div>
 ```
 
 ## Sass
